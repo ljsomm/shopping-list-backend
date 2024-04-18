@@ -1,0 +1,9 @@
+services:
+  db:
+    container_name: db-mongo
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${DB_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${DB_PASSWORD}
+    ports:
+      - 27017:27017
